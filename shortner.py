@@ -70,7 +70,7 @@ def elate(shorturl):
 
 	shorturl = shorturl[7:]
 	id = 0
-	count = 0
+	
 
 	for i in shorturl:
 		ascii = ord(i)
@@ -84,9 +84,9 @@ def elate(shorturl):
 		else :
 			raise Error('oopsie')
 		
-		id  = id + (n**count) * idx
+		id  = id*n + idx
 		
-		count+=1
+		
 
 	# print(id)
 	con = sqlite3.connect(PATH)
